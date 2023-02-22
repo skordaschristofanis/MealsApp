@@ -4,24 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e105a0f3-7f81-4651-aa48-357391ba6f89" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/mealsapp/MealsApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/mealsapp/controller/MainController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/mealsapp/controller/package-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/mealsapp/model/MainModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/mealsapp/model/package-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/mealsapp/package-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/mealsapp/view/MainForm.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/mealsapp/view/MainForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/mealsapp/view/package-info.java" afterDir="false" />
+    <list default="true" id="e105a0f3-7f81-4651-aa48-357391ba6f89" name="Changes" comment="Switched to MainView for consistency">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/mealsapp/view/MainView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/mealsapp/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/mealsapp/controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/mealsapp/view/MainForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/mealsapp/view/MainView.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/mealsapp/view/MainForm.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +40,9 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "431",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "759"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -89,6 +79,21 @@
       <option name="presentableId" value="Default" />
       <updated>1677079257934</updated>
     </task>
+    <task id="LOCAL-00001" summary="Initial commit">
+      <created>1677091404159</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1677091404159</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added MVC design pattern">
+      <created>1677091550863</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1677091550863</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -101,5 +106,11 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial commit" />
+    <MESSAGE value="Added MVC design pattern" />
+    <MESSAGE value="Switched to MainView for consistency" />
+    <option name="LAST_COMMIT_MESSAGE" value="Switched to MainView for consistency" />
   </component>
 </project>

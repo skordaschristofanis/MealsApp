@@ -1,22 +1,22 @@
 package org.mealsapp.controller;
 
 import org.mealsapp.model.MainModel;
-import org.mealsapp.view.MainForm;
+import org.mealsapp.view.MainView;
 
 public class MainController {
 
-    MainForm mainForm;
+    MainView mainView;
     MainModel mainModel;
 
     public MainController() {
 
-        this.mainForm = new MainForm();
+        this.mainView = new MainView();
         this.mainModel = new MainModel();
 
     }
 
     public void RunApplication() {
-        mainForm.displayWindow();
+        mainView.displayWindow();
     }
 
 }
