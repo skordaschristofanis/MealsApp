@@ -83,7 +83,6 @@ public class MealDataView extends JFrame {
 
         // Bring to front
         this.toFront();
-
     }
 
 }

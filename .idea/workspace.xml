@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e105a0f3-7f81-4651-aa48-357391ba6f89" name="Changes" comment="Added MealDataViewForm">
+    <list default="true" id="e105a0f3-7f81-4651-aa48-357391ba6f89" name="Changes" comment="Adjusted JFrame size for MealDataView">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/mealsapp/view/MealCategoriesView.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/mealsapp/view/MealCategoriesView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/mealsapp/view/MainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/mealsapp/view/MainView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/mealsapp/view/MealDataView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/mealsapp/view/MealDataView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -106,7 +110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677166546170</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Adjusted JFrame size for MealDataView">
+      <created>1677166657809</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1677166657809</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -125,6 +136,7 @@
     <MESSAGE value="Added MVC design pattern" />
     <MESSAGE value="Switched to MainView for consistency" />
     <MESSAGE value="Added MealDataViewForm" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added MealDataViewForm" />
+    <MESSAGE value="Adjusted JFrame size for MealDataView" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adjusted JFrame size for MealDataView" />
   </component>
 </project>

@@ -3,7 +3,6 @@ package org.mealsapp.view;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.WindowEvent;
 
 public class MainView extends JFrame {
     private JPanel pnlMain;
@@ -14,6 +13,7 @@ public class MainView extends JFrame {
 
     // Reference to Forms
     private MealDataView mealDataView;
+    private MealCategoriesView mealCategoriesView;
 
     public MainView() {
 
@@ -21,14 +21,27 @@ public class MainView extends JFrame {
         btnShowMealData.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Check if the for is already open
+                // Check if the form is already open
                 if (mealDataView == null) {
                     // Create new form
                     mealDataView = new MealDataView();
-                    mealDataView.displayWindow();
                 }
                 // Display the window
                 mealDataView.displayWindow();
+            }
+        });
+
+        // Open MealCategoryView form
+        btnShowMealList.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Check if the form is already open
+                if (mealCategoriesView == null) {
+                    // Create new form
+                    mealCategoriesView = new MealCategoriesView();
+                }
+                // Display the window
+                mealCategoriesView.displayWindow();
             }
         });
 
