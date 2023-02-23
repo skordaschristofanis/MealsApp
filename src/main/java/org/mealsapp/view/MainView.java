@@ -6,14 +6,31 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
 public class MainView extends JFrame {
-
     private JPanel pnlMain;
     private JButton btnShowMealData;
     private JButton btnShowMealList;
     private JButton btnShowMealStatsAndSaveToPDF;
     private JButton btnExit;
 
+    // Reference to Forms
+    private MealDataView mealDataView;
+
     public MainView() {
+
+        // Open MealDataView form
+        btnShowMealData.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Check if the for is already open
+                if (mealDataView == null) {
+                    // Create new form
+                    mealDataView = new MealDataView();
+                    mealDataView.displayWindow();
+                }
+                // Display the window
+                mealDataView.displayWindow();
+            }
+        });
 
         // Exit application
         btnExit.addActionListener(new ActionListener() {
@@ -36,8 +53,11 @@ public class MainView extends JFrame {
         // Set the application title
         mainView.setTitle("MealsApp");
 
-        // Set the geometry
+        // Set the size
         mainView.setSize(550, 200);
+
+        // Set the location
+        mainView.setLocationRelativeTo(null);
 
         // Set visibility
         mainView.setVisible(true);
