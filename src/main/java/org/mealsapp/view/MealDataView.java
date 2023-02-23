@@ -47,7 +47,7 @@ public class MealDataView extends JFrame {
         this.setTitle("MealsApp - Δεδομένα Γευμάτων");
 
         // Set the size
-        this.setSize(550, 400);
+        this.setSize(650, 400);
 
         // Set the location
         this.setLocationRelativeTo(null);
