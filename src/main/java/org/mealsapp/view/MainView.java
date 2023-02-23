@@ -14,6 +14,7 @@ public class MainView extends JFrame {
     // Reference to Forms
     private MealDataView mealDataView;
     private MealCategoriesView mealCategoriesView;
+    private MealStatisticsView mealStatisticsView;
 
     public MainView() {
 
@@ -42,6 +43,20 @@ public class MainView extends JFrame {
                 }
                 // Display the window
                 mealCategoriesView.displayWindow();
+            }
+        });
+
+        // Open MealStatisticsVeiw form
+        btnShowMealStatsAndSaveToPDF.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Check if the form is already open
+                if (mealStatisticsView == null) {
+                    // Create new form
+                    mealStatisticsView = new MealStatisticsView();
+                }
+                // Display the window
+                mealStatisticsView.displayWindow();
             }
         });
 
