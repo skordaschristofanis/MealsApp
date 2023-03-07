@@ -5,18 +5,20 @@ import org.mealsapp.view.MainView;
 
 public class MainController {
 
-    MainView mainView;
-    MainModel mainModel;
+    private final MainView mainView;
+    private final MainModel mainModel;
 
     public MainController() {
 
         this.mainView = new MainView();
         this.mainModel = new MainModel();
 
+        MealDataController mealDataController = new MealDataController(mainView.mealDataView, mainModel);
     }
 
     public void RunApplication() {
-        mainView.displayWindow();
+
+        mainView.displayWindow(mainView);
     }
 
 }

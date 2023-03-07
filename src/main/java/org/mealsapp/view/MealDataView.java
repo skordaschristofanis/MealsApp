@@ -1,20 +1,25 @@
 package org.mealsapp.view;
 
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumn;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 public class MealDataView extends JFrame {
     private JPanel pnlMealData;
     private JLabel lblMealName;
-    private JTextField txtMealName;
-    private JButton btnSearch;
-    private JTable tblSearchResults;
+    public JTextField txtMealName;
+    public JButton btnSearch;
+    public JTable tblSearchResults;
     private JPanel pnlMealDataControls;
     private JButton btnSaveToDB;
     private JButton btnDeleteMealData;
     private JButton btnEditMealData;
+    private JButton btnClearTable;
+    public DefaultTableModel searchTableModel;
 
     public MealDataView() {
 
@@ -33,6 +38,13 @@ public class MealDataView extends JFrame {
                         "Είστε σίγουροι ότι θέλετε να συνεχίσετε με τη διαγραφή;",
                         "Επιβεβαίωση διαγραφής",
                         JOptionPane.YES_NO_OPTION);
+            }
+        });
+        btnClearTable.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Clear the table
+                searchTableModel.setRowCount(0);
             }
         });
     }
@@ -74,6 +86,11 @@ public class MealDataView extends JFrame {
         this.tblSearchResults.addColumn(strCategoryColumn);
         this.tblSearchResults.addColumn(strAreaColumn);
         this.tblSearchResults.addColumn(strInstructionsColumn);
+
+        // Add the table model
+        String[] columnNames = {"strMeal", "strCategory", "strArea", "strInstructions"};
+        searchTableModel = new DefaultTableModel(columnNames, 0);
+        tblSearchResults.setModel(searchTableModel);
     }
 
     public void displayWindow() {

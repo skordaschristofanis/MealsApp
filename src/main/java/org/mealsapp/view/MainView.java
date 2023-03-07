@@ -12,21 +12,23 @@ public class MainView extends JFrame {
     private JButton btnExit;
 
     // Reference to Forms
-    private MealDataView mealDataView;
+    public MealDataView mealDataView;
     private MealCategoriesView mealCategoriesView;
     private MealStatisticsView mealStatisticsView;
 
     public MainView() {
 
+        // Check the Views
+        this.checkViews();
+
+        // Set the Nimbus look and feel
+        this.setNimbusLook();
+
+
         // Open MealDataView form
         btnShowMealData.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Check if the form is already open
-                if (mealDataView == null) {
-                    // Create new form
-                    mealDataView = new MealDataView();
-                }
                 // Display the window
                 mealDataView.displayWindow();
             }
@@ -36,25 +38,15 @@ public class MainView extends JFrame {
         btnShowMealList.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Check if the form is already open
-                if (mealCategoriesView == null) {
-                    // Create new form
-                    mealCategoriesView = new MealCategoriesView();
-                }
                 // Display the window
                 mealCategoriesView.displayWindow();
             }
         });
 
-        // Open MealStatisticsVeiw form
+        // Open MealStatisticsView form
         btnShowMealStatsAndSaveToPDF.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Check if the form is already open
-                if (mealStatisticsView == null) {
-                    // Create new form
-                    mealStatisticsView = new MealStatisticsView();
-                }
                 // Display the window
                 mealStatisticsView.displayWindow();
             }
@@ -71,26 +63,63 @@ public class MainView extends JFrame {
         });
     }
 
-    public void displayWindow() {
-        // The main application window
-        MainView mainView = new MainView();
+    private void checkViews() {
+        /*
+        * Creates the initial instances for the Views
+        * */
 
+        // Check if the form is already open
+        if (this.mealDataView == null) {
+            // Create new form
+            this.mealDataView = new MealDataView();
+        }
+
+        // Check if the form is already open
+        if (this.mealCategoriesView == null) {
+            // Create new form
+            this.mealCategoriesView = new MealCategoriesView();
+        }
+
+        // Check if the form is already open
+        if (this.mealStatisticsView == null) {
+            // Create new form
+            this.mealStatisticsView = new MealStatisticsView();
+        }
+    }
+
+    public void setNimbusLook() {
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException |
+                 UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(MainView.class.getName()).log(
+                    java.util.logging.Level.SEVERE, null, ex
+            );
+        }
+    }
+
+    public void displayWindow(MainView view) {
         // Set the content pane
-        mainView.setContentPane(mainView.pnlMain);
+        view.setContentPane(view.pnlMain);
 
         // Set the application title
-        mainView.setTitle("MealsApp");
+        view.setTitle("MealsApp");
 
         // Set the size
-        mainView.setSize(550, 200);
+        view.setSize(550, 200);
 
         // Set the location
-        mainView.setLocationRelativeTo(null);
+        view.setLocationRelativeTo(null);
 
         // Set visibility
-        mainView.setVisible(true);
+        view.setVisible(true);
 
         // Set close operation
-        mainView.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        view.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 }
