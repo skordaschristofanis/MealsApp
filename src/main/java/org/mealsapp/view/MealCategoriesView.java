@@ -1,16 +1,21 @@
 package org.mealsapp.view;
 
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableColumn;
 
 public class MealCategoriesView extends JFrame {
     private JPanel pnlMealCategories;
     private JLabel lblMealCategory;
-    private JComboBox comboMealCategory;
-    private JTextArea txtCategoryResults;
+    public JTextField txtCategoryName;
+    public JButton btnSearchCategory;
+    private JTable tblCategoryResults;
+    public DefaultTableModel categoryResultsTableModel;
 
     public MealCategoriesView() {
         // Run the configuration methods
         this.configureMealCategoriesViewForm();
+        this.configureCategoryResultsTableHeaders();
     }
 
     private void configureMealCategoriesViewForm() {
@@ -32,6 +37,21 @@ public class MealCategoriesView extends JFrame {
         this.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
     }
 
+    private void configureCategoryResultsTableHeaders() {
+        // Define the table columns
+        TableColumn strMealColumn = new TableColumn();
+
+        // Set the header values
+        strMealColumn.setHeaderValue("strMeal");
+
+        // Add the columns to the table
+        this.tblCategoryResults.addColumn(strMealColumn);
+
+        // Add the table model
+        String[] columnNames = {"strMeal"};
+        categoryResultsTableModel = new DefaultTableModel(columnNames, 0);
+        tblCategoryResults.setModel(categoryResultsTableModel);
+    }
 
     public void displayWindow(){
 

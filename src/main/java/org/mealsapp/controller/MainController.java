@@ -14,6 +14,9 @@ public class MainController {
         this.mainModel = new MainModel();
 
         MealDataController mealDataController = new MealDataController(mainView.mealDataView, mainModel);
+        MealCategoriesController mealCategoriesController = new MealCategoriesController(
+                mainView.mealCategoriesView, mainModel
+        );
     }
 
     public void RunApplication() {

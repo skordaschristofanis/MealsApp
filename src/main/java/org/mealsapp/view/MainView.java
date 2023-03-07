@@ -13,7 +13,7 @@ public class MainView extends JFrame {
 
     // Reference to Forms
     public MealDataView mealDataView;
-    private MealCategoriesView mealCategoriesView;
+    public MealCategoriesView mealCategoriesView;
     private MealStatisticsView mealStatisticsView;
 
     public MainView() {
