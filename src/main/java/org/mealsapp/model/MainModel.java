@@ -7,12 +7,16 @@ public class MainModel {
     public MainModel() {
         //constructor
         //Set the baseURI value
-        baseURI = "https://www.themealdb.com/api/json/v1/1/search.php?s=";
+        baseURI = "https://www.themealdb.com/api/json/v1/1/";
     }
 
-    public String getBaseURI() {
-        // Property for baseURI
-        return baseURI;
+    public String getMealURI() {
+        // Property for mealURI
+        return baseURI + "search.php?s=";
     }
 
+    public String getCategoryURI() {
+        // Property for categoryURI
+        return baseURI + "filter.php?c=";
+    }
 }

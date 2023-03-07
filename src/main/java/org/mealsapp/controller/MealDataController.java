@@ -50,7 +50,7 @@ public class MealDataController {
         // Check for empty strings
         if (!meal.isEmpty()) {
             // Call API
-            String baseURI = model.getBaseURI();
+            String baseURI = model.getMealURI();
 
             OkHttpClient client = new OkHttpClient();
             Request request = new Request.Builder().url(baseURI + meal).build();
