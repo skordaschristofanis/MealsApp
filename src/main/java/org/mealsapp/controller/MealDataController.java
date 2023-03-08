@@ -9,6 +9,7 @@ import org.mealsapp.model.Meal;
 import org.mealsapp.model.PreexistingEntityException;
 import org.mealsapp.view.MealDataView;
 
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
@@ -75,10 +76,15 @@ public class MealDataController {
                             meal.setStrmeal(strMeal);
                             meal.setStrcategory(strCategory);
                             meal.setStrarea(strArea);
-//                            meal.setStrinstructions(strInstructions);
+                            // TODO: Fix adding instructions to the DB!
+                            //  meal.setStrinstructions(strInstructions);
                             meal.setStatus(1);
-
-//                            MealJpaController mealJpaController = new MealJpaController(model);
+                            // Info message for adding a new meal.
+                            JOptionPane.showMessageDialog(
+                                    null,
+                                    "Το γεύμα καταχωρήθηκε στην βάση δεδομένων ",
+                                    "Ενημέρωση",
+                                    JOptionPane.INFORMATION_MESSAGE);
 
                             try {
                                 controller.create(meal);
@@ -95,6 +101,12 @@ public class MealDataController {
                         meal.setStatus(meal.getStatus() + 1);
                         try {
                             controller.edit(meal);
+                            // Status message for existing Meal
+                            JOptionPane.showMessageDialog(
+                                    null,
+                                    "Το γεύμα υπάρχει ήδη στην βάση δεδομένων ",
+                                    "Ενημέρωση",
+                                    JOptionPane.WARNING_MESSAGE);
                         } catch (Exception ex) {
                             throw new RuntimeException(ex);
                         }
