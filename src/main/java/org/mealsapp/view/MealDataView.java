@@ -17,7 +17,7 @@ public class MealDataView extends JFrame {
     private JPanel pnlMealDataControls;
     public JButton btnSaveToDB;
     public JButton btnDeleteMealData;
-    private JButton btnEditMealData;
+    public JButton btnEditMealData;
     private JButton btnClearTable;
     public DefaultTableModel searchTableModel;
 
@@ -35,7 +35,7 @@ public class MealDataView extends JFrame {
                 searchTableModel.setRowCount(0);
             }
         });
-    }
+     }
 
     private void configureMealDataViewForm() {
         // The main configuration for the MealDataViewForm

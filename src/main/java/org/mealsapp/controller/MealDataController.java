@@ -174,6 +174,77 @@ public class MealDataController {
                 }
             }
         });
+
+        // Edit a meal
+        this.view.btnEditMealData.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                int selectedRow = view.tblSearchResults.getSelectedRow();
+                // Check for selected row
+                if (selectedRow != -1) {
+
+                    // Meal data
+                    String strMeal = view.searchTableModel.getValueAt(selectedRow, 0).toString();
+                    String strCategory = view.searchTableModel.getValueAt(selectedRow, 1).toString();
+                    String strArea = view.searchTableModel.getValueAt(selectedRow, 2).toString();
+                    String strInstructions = view.searchTableModel.getValueAt(selectedRow, 3).toString();
+
+                    // Check if the item is already in the DB
+                    Query query = model.entityManager.createNamedQuery("Meal.findByStrmeal");
+                    query.setParameter("strmeal", strMeal);
+
+                    if (query.getResultList().isEmpty()) {
+                        try {
+                            // Add to database with changes
+                            Meal meal = new Meal();
+                            meal.setIdmeal(model.getNextId());
+                            meal.setStrmeal(strMeal);
+                            meal.setStrcategory(strCategory);
+                            meal.setStrarea(strArea);
+                            // TODO: Fix adding instructions to the DB!
+                            //  meal.setStrinstructions(strInstructions);
+                            meal.setStatus(1);
+                            // Info message for adding a new meal.
+                            JOptionPane.showMessageDialog(
+                                    null,
+                                    "Το γεύμα καταχωρήθηκε στην βάση δεδομένων με τις τροποποιήσεις.",
+                                    "Ενημέρωση",
+                                    JOptionPane.INFORMATION_MESSAGE);
+
+                            try {
+                                controller.create(meal);
+                            } catch (Exception ex) {
+                                System.out.println(ex);
+                            }
+                        } catch (Exception ex) {
+                            System.out.println(ex);
+                        }
+                    }
+                    else {
+                        // Update the meal
+                        Meal meal = (Meal) query.getSingleResult();
+                        meal.setStrmeal(strMeal);
+                        meal.setStrcategory(strCategory);
+                        meal.setStrarea(strArea);
+                        // TODO: Fix adding instructions to the DB!
+                        //  meal.setStrinstructions(strInstructions);
+
+                        try {
+                            controller.edit(meal);
+                            // Status message for existing Meal
+                            JOptionPane.showMessageDialog(
+                                    null,
+                                    "Το γεύμα τροποποιήθηκε. ",
+                                    "Ενημέρωση",
+                                    JOptionPane.WARNING_MESSAGE);
+                        } catch (Exception ex) {
+                            throw new RuntimeException(ex);
+                        }
+                    }
+                }
+            }
+        });
     }
 
     private void getAPIResponse() {
