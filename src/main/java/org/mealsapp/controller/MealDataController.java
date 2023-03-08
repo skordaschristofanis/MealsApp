@@ -114,6 +114,66 @@ public class MealDataController {
                 }
             }
         });
+
+        // Delete from DB
+        this.view.btnDeleteMealData.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Delete meal data
+                int selectedRow = view.tblSearchResults.getSelectedRow();
+
+                // Check for selected row
+                if (selectedRow != -1) {
+                    // Meal data
+                    String strMeal = view.searchTableModel.getValueAt(selectedRow, 0).toString();
+
+                    // Check if the item is in the DB
+                    Query query = model.entityManager.createNamedQuery("Meal.findByStrmeal");
+                    query.setParameter("strmeal", strMeal);
+
+                    if (!query.getResultList().isEmpty()) {
+                        int answer = JOptionPane.showOptionDialog(
+                                null,
+                                "Το γεύμα θα διαγραφεί από τη βάση. Σίγουρα \n" +
+                                        "θέλετε να συνεχίσετε;",
+                                "Επιβεβαίωση Διαγραφής",
+                                JOptionPane.YES_NO_OPTION,
+                                JOptionPane.QUESTION_MESSAGE,
+                                null,
+                                new String[] {"Ναι", "Όχι"},
+                                "Όχι"
+                        );
+
+                        if (answer == JOptionPane.YES_OPTION) {
+                            // Delete it
+                            try {
+                                model.entityManager.getTransaction().begin();
+                                Meal meal = (Meal) query.getSingleResult();
+                                Integer idMeal = meal.getIdmeal();
+
+                                Query deleteQuery = model.entityManager.createQuery(
+                                        "DELETE FROM Meal m WHERE m.idmeal = :idmeal"
+                                );
+                                deleteQuery.setParameter("idmeal", idMeal).executeUpdate();
+
+                                model.entityManager.persist(meal);
+                                model.entityManager.getTransaction().commit();
+                            } catch (Exception ex) {
+                                System.out.println(ex);
+                            }
+                        }
+
+                    } else {
+                        // No selection message
+                        JOptionPane.showMessageDialog(
+                                null,
+                                "Παρακαλώ επιλέξτε πρώτα ένα γεύμα που να υπάρχει στη ΒΔ.",
+                                "Ενημέρωση",
+                                JOptionPane.INFORMATION_MESSAGE);
+                    }
+                }
+            }
+        });
     }
 
     private void getAPIResponse() {

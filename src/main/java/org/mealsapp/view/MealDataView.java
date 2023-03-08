@@ -16,7 +16,7 @@ public class MealDataView extends JFrame {
     public JTable tblSearchResults;
     private JPanel pnlMealDataControls;
     public JButton btnSaveToDB;
-    private JButton btnDeleteMealData;
+    public JButton btnDeleteMealData;
     private JButton btnEditMealData;
     private JButton btnClearTable;
     public DefaultTableModel searchTableModel;
@@ -28,19 +28,7 @@ public class MealDataView extends JFrame {
         this.configureSearchResultsTableHeaders();
 
         // Listeners
-        btnDeleteMealData.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-                //default icon, custom title
-                int popupConfirmation = JOptionPane.showConfirmDialog(
-                        pnlMealData,
-                        "Είστε σίγουροι ότι θέλετε να συνεχίσετε με τη διαγραφή;",
-                        "Επιβεβαίωση διαγραφής",
-                        JOptionPane.YES_NO_OPTION);
-            }
-        });
-        btnClearTable.addActionListener(new ActionListener() {
+         btnClearTable.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 // Clear the table
@@ -66,6 +54,9 @@ public class MealDataView extends JFrame {
 
         // Set close operation
         this.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+
+        // Set single selection mode on the table
+        this.tblSearchResults.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
     }
 
     private void configureSearchResultsTableHeaders() {

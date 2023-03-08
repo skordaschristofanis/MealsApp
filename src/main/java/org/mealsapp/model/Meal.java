@@ -114,5 +114,5 @@ public class Meal implements Serializable {
     }
 
     @Override
-    public String toString() { return "org.mealsapp.model.Meal[ idneal=" + idmeal + " ]"; }
+    public String toString() { return "org.mealsapp.model.Meal[ idmeal=" + idmeal + " ]"; }
 }
