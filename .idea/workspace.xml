@@ -5,10 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e105a0f3-7f81-4651-aa48-357391ba6f89" name="Changes" comment="Added MealCategoriesView Form">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/mealsapp/view/MealStatisticsView.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/mealsapp/view/MealStatisticsView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/mealsapp/transport/MealCategoryDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/mealsapp/transport/MealDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/mealsapp/view/MainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/mealsapp/view/MainView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/mealsapp/MealsApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/mealsapp/MealsApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/mealsapp/view/MealDataView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/mealsapp/view/MealDataView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,13 +27,22 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="jar://$USER_HOME$/.jdks/corretto-17.0.6/lib/src.zip!/java.desktop/java/awt/Component.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$PROJECT_DIR$/../../../../Program Files/Java/jdk-17/lib/src.zip!/java.desktop/javax/swing/JTable.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$PROJECT_DIR$/../../../../Program Files/Java/jdk-17/lib/src.zip!/java.sql/java/sql/SQLException.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
   </component>
   <component name="ProjectId" id="2M6DhGa6HFFE9Zc1G6CZEoJhbo8" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -44,10 +56,24 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "153",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "759"
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "759",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Lapitopi/IdeaProjects/MealsApp",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "derby"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.mealsapp.transport" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\skorda\Desktop\PLH24\MealsApp\src\mealsapp" />
     </key>
@@ -80,6 +106,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1677079257934</updated>
+      <workItem from="1677173906437" duration="414000" />
+      <workItem from="1677174331540" duration="642000" />
+      <workItem from="1677175042623" duration="494000" />
+      <workItem from="1677697424729" duration="9000" />
+      <workItem from="1677697460349" duration="599000" />
+      <workItem from="1677698697748" duration="1306000" />
+      <workItem from="1677922188010" duration="837000" />
+      <workItem from="1677939055789" duration="280000" />
+      <workItem from="1677939358970" duration="30572000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1677091404159</created>
@@ -145,5 +180,46 @@
     <MESSAGE value="Adjusted JFrame size for MealDataView" />
     <MESSAGE value="Added MealCategoriesView Form" />
     <option name="LAST_COMMIT_MESSAGE" value="Added MealCategoriesView Form" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/mealsapp/view/MealCategoriesView.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/mealsapp/view/MealCategoriesView.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/mealsapp/view/MainView.java</url>
+          <line>55</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/mealsapp/view/MainView.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/mealsapp/MealsApp.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/mealsapp/MealsApp.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../../../../Program Files/Java/jdk-17/lib/src.zip!/java.sql/java/sql/DriverManager.java</url>
+          <line>251</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
