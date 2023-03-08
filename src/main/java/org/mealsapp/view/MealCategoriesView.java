@@ -1,6 +1,7 @@
 package org.mealsapp.view;
 
 import javax.swing.*;
+import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumn;
 
@@ -35,6 +36,14 @@ public class MealCategoriesView extends JFrame {
 
         // Set close operation
         this.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+
+        // Set Auto resize mode
+        this.tblCategoryResults.setAutoResizeMode(JTable.AUTO_RESIZE_ALL_COLUMNS);
+
+        // Set cell renderer
+        DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
+        centerRenderer.setHorizontalAlignment(javax.swing.JLabel.CENTER);
+        tblCategoryResults.setDefaultRenderer(Object.class, centerRenderer);
     }
 
     private void configureCategoryResultsTableHeaders() {

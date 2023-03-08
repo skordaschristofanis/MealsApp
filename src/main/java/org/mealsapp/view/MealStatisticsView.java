@@ -1,6 +1,7 @@
 package org.mealsapp.view;
 
 import javax.swing.*;
+import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumn;
 import java.awt.event.ActionEvent;
@@ -9,10 +10,10 @@ import java.awt.event.ActionListener;
 public class MealStatisticsView extends JFrame {
     private JPanel pnlMealStatistics;
     private JLabel lblMostSearchedMeals;
-    private JTable tblMealStatistics;
+    public JTable tblMealStatistics;
     private JPanel pnlMealStatisticsControls;
     public JButton btnRefreshTable;
-    private JButton btnSaveToPDF;
+    public JButton btnSaveToPDF;
 
     public DefaultTableModel statisticsTableModel;
 
@@ -21,7 +22,7 @@ public class MealStatisticsView extends JFrame {
         // Run configuration methods
         this.configureMealStatisticsViewForm();
         this.configureMeanStatisticsTableHeaders();
-    }
+     }
 
     public void configureMeanStatisticsTableHeaders() {
         // Define the table columns
@@ -49,6 +50,14 @@ public class MealStatisticsView extends JFrame {
         String[] columnNames = {"idMeal", "strMeal", "strCategory", "strArea", "views"};
         statisticsTableModel = new DefaultTableModel(columnNames, 0);
         tblMealStatistics.setModel(statisticsTableModel);
+
+        // Set Auto resize mode
+        tblMealStatistics.setAutoResizeMode(JTable.AUTO_RESIZE_ALL_COLUMNS);
+
+        // Set cell renderer
+        DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
+        centerRenderer.setHorizontalAlignment(javax.swing.JLabel.CENTER);
+        tblMealStatistics.setDefaultRenderer(Object.class, centerRenderer);
     }
 
     public void configureMealStatisticsViewForm() {

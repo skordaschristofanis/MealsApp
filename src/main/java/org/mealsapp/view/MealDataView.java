@@ -1,6 +1,7 @@
 package org.mealsapp.view;
 
 import javax.swing.*;
+import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumn;
 import java.awt.event.ActionEvent;
@@ -57,6 +58,14 @@ public class MealDataView extends JFrame {
 
         // Set single selection mode on the table
         this.tblSearchResults.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+
+        // Set Auto resize mode
+        this.tblSearchResults.setAutoResizeMode(JTable.AUTO_RESIZE_ALL_COLUMNS);
+
+        // Set cell renderer
+        DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
+        centerRenderer.setHorizontalAlignment(javax.swing.JLabel.CENTER);
+        tblSearchResults.setDefaultRenderer(Object.class, centerRenderer);
     }
 
     private void configureSearchResultsTableHeaders() {
