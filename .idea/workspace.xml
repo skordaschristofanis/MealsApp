@@ -4,21 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e105a0f3-7f81-4651-aa48-357391ba6f89" name="Changes" comment="Updated files">
+    <list default="true" id="e105a0f3-7f81-4651-aa48-357391ba6f89" name="Changes" comment="Uploaded all files and restructured!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/MainView.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/MealCategoriesView.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/MealsDataView.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/PLH24_3ERG_PROTYPO_SYGGRAFHS_V1.0.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/PLH24_3ERG_PROTYPO_SYGGRAFHS_V1.0.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/PLH24_3ERG_PROTYPO_SYGGRAFHS_V2.0.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/PLH24_3ERG_PROTYPO_SYGGRAFHS_V2.0.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/PLH24_3ERG_PROTYPO_SYGGRAFHS_V3.0.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/PLH24_3ERG_PROTYPO_SYGGRAFHS_V3.0.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Sprint.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/UML_MealsApp.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/example_run.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/video_2023_08_3_14_30_53.rar" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +102,7 @@
       <updated>1677079257934</updated>
       <workItem from="1678231121457" duration="773000" />
       <workItem from="1678245712114" duration="15158000" />
-      <workItem from="1678260948087" duration="4269000" />
+      <workItem from="1678260948087" duration="6059000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1677091404159</created>
@@ -250,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678289610882</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Uploaded all files and restructured!">
+      <created>1678290446635</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1678290446635</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,6 +281,7 @@
     <MESSAGE value="Added statistics and save to .pdf files" />
     <MESSAGE value="Added updated UML File" />
     <MESSAGE value="Updated files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated files" />
+    <MESSAGE value="Uploaded all files and restructured!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Uploaded all files and restructured!" />
   </component>
 </project>
