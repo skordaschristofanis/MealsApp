@@ -35,4 +35,18 @@ public class MainModel {
         return list;
     }
 
+    public Integer getNextId() {
+        Query query = entityManager.createNativeQuery("SELECT MAX(IDMEAL) FROM MEAL");
+        Object nextId = query.getSingleResult();
+        Integer id = null;
+        // Check for null
+        if (nextId == null) {
+           id = 1;
+        }
+        else {
+            id = ((Number) nextId).intValue() + 1;
+        }
+        return id;
+    }
+
 }

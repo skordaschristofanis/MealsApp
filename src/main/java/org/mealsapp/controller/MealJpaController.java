@@ -29,10 +29,6 @@ public class MealJpaController implements Serializable {
                 throw new PreexistingEntityException("Meal " + meal + " already exists.", ex);
             }
             throw ex;
-        } finally {
-            if (entityManager != null) {
-                entityManager.close();
-            }
         }
     }
 
@@ -50,10 +46,6 @@ public class MealJpaController implements Serializable {
                 }
             }
             throw ex;
-        } finally {
-            if (entityManager != null) {
-                entityManager.close();
-            }
         }
     }
 
@@ -69,19 +61,17 @@ public class MealJpaController implements Serializable {
             }
             entityManager.remove(meal);
             entityManager.getTransaction().commit();
-        } finally {
-            if (entityManager != null) {
-                entityManager.close();
-            }
+        } catch (Exception ex) {
+            System.out.println(ex);
         }
     }
 
     public Meal findMeal(Integer id) {
         try {
             return entityManager.find(Meal.class, id);
-        } finally {
-            entityManager.close();
+        } catch (Exception ex) {
+            System.out.println(ex);
         }
+        return null;
     }
-
 }

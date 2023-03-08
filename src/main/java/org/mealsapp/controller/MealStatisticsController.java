@@ -28,6 +28,5 @@ public class MealStatisticsController {
     public void queryMealDB() {
         // Get meals shorted by descending order of views
         List<Object[]> queryResults = model.getQueryResult();
-        System.out.println(queryResults);
     }
 }

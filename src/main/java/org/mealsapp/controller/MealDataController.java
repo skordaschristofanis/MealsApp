@@ -1,9 +1,12 @@
 package org.mealsapp.controller;
 
 import com.google.gson.*;
+import jakarta.persistence.Query;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import org.mealsapp.model.MainModel;
+import org.mealsapp.model.Meal;
+import org.mealsapp.model.PreexistingEntityException;
 import org.mealsapp.view.MealDataView;
 
 import java.awt.event.ActionEvent;
@@ -11,17 +14,20 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.io.IOException;
+import java.util.List;
 
 
 public class MealDataController {
 
     private final MealDataView view;
     private final MainModel model;
+    private final MealJpaController controller;
 
 
-    public MealDataController(MealDataView view, MainModel model) {
+    public MealDataController(MealDataView view, MainModel model, MealJpaController controller) {
         this.view = view;
         this.model = model;
+        this.controller = controller;
 
         // Click event for the search button
         this.view.btnSearch.addActionListener(new ActionListener() {
@@ -39,6 +45,61 @@ public class MealDataController {
                     getAPIResponse();
                 }
 
+            }
+        });
+
+        // Save to DB
+        this.view.btnSaveToDB.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                int selectedRow = view.tblSearchResults.getSelectedRow();
+                // Check for selected row
+                if (selectedRow != -1) {
+
+                    // Meal data
+                    String strMeal = view.searchTableModel.getValueAt(selectedRow, 0).toString();
+                    String strCategory = view.searchTableModel.getValueAt(selectedRow, 1).toString();
+                    String strArea = view.searchTableModel.getValueAt(selectedRow, 2).toString();
+                    String strInstructions = view.searchTableModel.getValueAt(selectedRow, 3).toString();
+
+                    // Check if the item is already in the DB
+                    Query query = model.entityManager.createNamedQuery("Meal.findByStrmeal");
+                    query.setParameter("strmeal", strMeal);
+
+                    if (query.getResultList().isEmpty()) {
+                        try {
+                            // Add to database
+                            Meal meal = new Meal();
+                            meal.setIdmeal(model.getNextId());
+                            meal.setStrmeal(strMeal);
+                            meal.setStrcategory(strCategory);
+                            meal.setStrarea(strArea);
+//                            meal.setStrinstructions(strInstructions);
+                            meal.setStatus(1);
+
+//                            MealJpaController mealJpaController = new MealJpaController(model);
+
+                            try {
+                                controller.create(meal);
+                            } catch (Exception ex) {
+                                System.out.println(ex);
+                            }
+                        } catch (Exception ex) {
+                            System.out.println(ex);
+                        }
+                    }
+                    else {
+                        // Increase the status if it exists
+                        Meal meal = (Meal) query.getSingleResult();
+                        meal.setStatus(meal.getStatus() + 1);
+                        try {
+                            controller.edit(meal);
+                        } catch (Exception ex) {
+                            throw new RuntimeException(ex);
+                        }
+                    }
+                }
             }
         });
     }

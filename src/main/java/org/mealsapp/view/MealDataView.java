@@ -15,7 +15,7 @@ public class MealDataView extends JFrame {
     public JButton btnSearch;
     public JTable tblSearchResults;
     private JPanel pnlMealDataControls;
-    private JButton btnSaveToDB;
+    public JButton btnSaveToDB;
     private JButton btnDeleteMealData;
     private JButton btnEditMealData;
     private JButton btnClearTable;

@@ -17,7 +17,9 @@ public class MainController {
 
         // Controllers
         MealJpaController mealJpaController = new MealJpaController(mainModel);
-        MealDataController mealDataController = new MealDataController(mainView.mealDataView, mainModel);
+        MealDataController mealDataController = new MealDataController(
+                mainView.mealDataView, mainModel, mealJpaController
+        );
         MealCategoriesController mealCategoriesController = new MealCategoriesController(
                 mainView.mealCategoriesView, mainModel
         );
