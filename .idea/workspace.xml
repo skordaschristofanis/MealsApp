@@ -4,34 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e105a0f3-7f81-4651-aa48-357391ba6f89" name="Changes" comment="Added edit meal and update DB">
+    <list default="true" id="e105a0f3-7f81-4651-aa48-357391ba6f89" name="Changes" comment="Added statistics and save to .pdf files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyDerbyDB/db.lck" beforeDir="false" afterPath="$PROJECT_DIR$/MyDerbyDB/db.lck" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyDerbyDB/log/log.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/MyDerbyDB/log/log.ctrl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyDerbyDB/log/log1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/MyDerbyDB/log/log1.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyDerbyDB/log/logmirror.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/MyDerbyDB/log/logmirror.ctrl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyDerbyDB/seg0/c101.dat" beforeDir="false" afterPath="$PROJECT_DIR$/MyDerbyDB/seg0/c101.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyDerbyDB/seg0/c111.dat" beforeDir="false" afterPath="$PROJECT_DIR$/MyDerbyDB/seg0/c111.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyDerbyDB/seg0/c121.dat" beforeDir="false" afterPath="$PROJECT_DIR$/MyDerbyDB/seg0/c121.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyDerbyDB/seg0/c130.dat" beforeDir="false" afterPath="$PROJECT_DIR$/MyDerbyDB/seg0/c130.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyDerbyDB/seg0/c141.dat" beforeDir="false" afterPath="$PROJECT_DIR$/MyDerbyDB/seg0/c141.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyDerbyDB/seg0/c20.dat" beforeDir="false" afterPath="$PROJECT_DIR$/MyDerbyDB/seg0/c20.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyDerbyDB/seg0/c31.dat" beforeDir="false" afterPath="$PROJECT_DIR$/MyDerbyDB/seg0/c31.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyDerbyDB/seg0/c41.dat" beforeDir="false" afterPath="$PROJECT_DIR$/MyDerbyDB/seg0/c41.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyDerbyDB/seg0/c51.dat" beforeDir="false" afterPath="$PROJECT_DIR$/MyDerbyDB/seg0/c51.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyDerbyDB/seg0/c60.dat" beforeDir="false" afterPath="$PROJECT_DIR$/MyDerbyDB/seg0/c60.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyDerbyDB/seg0/c71.dat" beforeDir="false" afterPath="$PROJECT_DIR$/MyDerbyDB/seg0/c71.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyDerbyDB/seg0/c81.dat" beforeDir="false" afterPath="$PROJECT_DIR$/MyDerbyDB/seg0/c81.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyDerbyDB/seg0/c90.dat" beforeDir="false" afterPath="$PROJECT_DIR$/MyDerbyDB/seg0/c90.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyDerbyDB/seg0/ca1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/MyDerbyDB/seg0/ca1.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyDerbyDB/seg0/cb1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/MyDerbyDB/seg0/cb1.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyDerbyDB/seg0/cf0.dat" beforeDir="false" afterPath="$PROJECT_DIR$/MyDerbyDB/seg0/cf0.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/derby.log" beforeDir="false" afterPath="$PROJECT_DIR$/derby.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/mealsapp/controller/MealStatisticsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/mealsapp/controller/MealStatisticsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/mealsapp/view/MealCategoriesView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/mealsapp/view/MealCategoriesView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/mealsapp/view/MealDataView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/mealsapp/view/MealDataView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/mealsapp/view/MealStatisticsView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/mealsapp/view/MealStatisticsView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +98,7 @@
       <updated>1677079257934</updated>
       <workItem from="1678231121457" duration="773000" />
       <workItem from="1678245712114" duration="15158000" />
-      <workItem from="1678260948087" duration="596000" />
+      <workItem from="1678260948087" duration="2042000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1677091404159</created>
@@ -238,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678258719987</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Added statistics and save to .pdf files">
+      <created>1678261614684</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1678261614684</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -272,6 +253,7 @@
     <MESSAGE value="Added message dialogs for adding meal to the database" />
     <MESSAGE value="Added delete from DB" />
     <MESSAGE value="Added edit meal and update DB" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added edit meal and update DB" />
+    <MESSAGE value="Added statistics and save to .pdf files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added statistics and save to .pdf files" />
   </component>
 </project>
