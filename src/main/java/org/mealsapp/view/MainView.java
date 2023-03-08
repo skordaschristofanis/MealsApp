@@ -14,7 +14,7 @@ public class MainView extends JFrame {
     // Reference to Forms
     public MealDataView mealDataView;
     public MealCategoriesView mealCategoriesView;
-    private MealStatisticsView mealStatisticsView;
+    public MealStatisticsView mealStatisticsView;
 
     public MainView() {
 
@@ -65,8 +65,8 @@ public class MainView extends JFrame {
 
     private void checkViews() {
         /*
-        * Creates the initial instances for the Views
-        * */
+         * Creates the initial instances for the Views
+         * */
 
         // Check if the form is already open
         if (this.mealDataView == null) {

@@ -1,15 +1,20 @@
 package org.mealsapp.view;
 
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumn;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class MealStatisticsView extends JFrame {
     private JPanel pnlMealStatistics;
     private JLabel lblMostSearchedMeals;
     private JTable tblMealStatistics;
     private JPanel pnlMealStatisticsControls;
-    private JButton btnRefreshTable;
+    public JButton btnRefreshTable;
     private JButton btnSaveToPDF;
+
+    public DefaultTableModel statisticsTableModel;
 
     public MealStatisticsView() {
 
@@ -20,16 +25,30 @@ public class MealStatisticsView extends JFrame {
 
     public void configureMeanStatisticsTableHeaders() {
         // Define the table columns
+        TableColumn mealIdColumn = new TableColumn();
         TableColumn strMealColumn = new TableColumn();
-        TableColumn popularityColumn = new TableColumn();
+        TableColumn strCategoryColumn = new TableColumn();
+        TableColumn strAreaColumn = new TableColumn();
+        TableColumn viewsColumn = new TableColumn();
 
         // Set the header values
+        mealIdColumn.setHeaderValue("idMeal");
         strMealColumn.setHeaderValue("strMeal");
-        popularityColumn.setHeaderValue("Δημοφιλία");
+        strCategoryColumn.setHeaderValue("strCategory");
+        strAreaColumn.setHeaderValue("strArea");
+        viewsColumn.setHeaderValue("views");
 
         // Add the columns to the table
+        this.tblMealStatistics.addColumn(mealIdColumn);
         this.tblMealStatistics.addColumn(strMealColumn);
-        this.tblMealStatistics.addColumn(popularityColumn);
+        this.tblMealStatistics.addColumn(strCategoryColumn);
+        this.tblMealStatistics.addColumn(strAreaColumn);
+        this.tblMealStatistics.addColumn(viewsColumn);
+
+        // Add the table model
+        String[] columnNames = {"idMeal", "strMeal", "strCategory", "strArea", "views"};
+        statisticsTableModel = new DefaultTableModel(columnNames, 0);
+        tblMealStatistics.setModel(statisticsTableModel);
     }
 
     public void configureMealStatisticsViewForm() {
